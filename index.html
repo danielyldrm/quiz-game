@@ -2,19 +2,27 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz Oyunu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Game</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>Quiz Oyunu</h1>
+
+  <div id="start-screen">
+    <h1>Oyunumuza Hoşgeldiniz</h1>
+    <button id="start-btn">Oyuna Başla</button>
+  </div>
+
+  <div id="quiz-container" style="display:none; position: relative;">
+    <div id="score">Skor: 0</div>
+    <div id="coins" style="margin-top:5px; font-weight:bold; font-size:16px;">🪙 Jeton: 0</div>
+    <div id="lives" style="margin-top:5px; font-weight:bold; font-size:16px;">❤️ Can: 3</div>
+
     <div id="question-container">
-      <p id="question"></p>
+      <div id="question"></div>
       <div id="answers"></div>
+      <button id="next-btn" style="display:none;">Sonraki Soru</button>
     </div>
-    <button id="next-btn">Sonraki Soru</button>
-    <p id="score"></p>
   </div>
 
   <script src="script.js"></script>

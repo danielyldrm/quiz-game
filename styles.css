@@ -1,65 +1,90 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  background-color: #fafafa;
+  color: #222;
 }
 
-.quiz-container {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: relative;
-}
-
-h1 {
+#start-screen {
   text-align: center;
-  color: #333;
+  margin-top: 100px;
+}
+
+#username {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+}
+
+#start-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 #question {
   font-size: 20px;
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.answer-btn {
+#answers button {
   display: block;
+  margin: 7px 0;
+  padding: 10px;
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  font-size: 16px;
   font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  background-color: #e0e0e0;
+  font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
   transition: background-color 0.3s ease;
 }
 
-.answer-btn:hover {
-  background-color: #d5d5d5;
+#answers button:hover:not(:disabled) {
+  background-color: #eee;
 }
 
 #next-btn {
+  margin-top: 15px;
   padding: 10px 20px;
+  font-weight: bold;
   font-size: 16px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 6px;
+  cursor: pointer;
   background-color: #4CAF50;
   color: white;
-  cursor: pointer;
-  display: none;
+  border: none;
+  border-radius: 5px;
 }
 
-#score {
+#next-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: default;
+}
+
+#leaderboard {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+button.answer-btn:disabled {
+  cursor: default;
+}
+
+button#market-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-weight: bold;
-  font-size: 18px;
-  color: #333;
+  top: 15px;
+  left: 20px;
+  padding: 8px 12px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
